@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap');
+
+#root {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: calc(46px + 69 * (100vw - 1024px) / (2400 - 1024));
+  font-weight: bolder; /* for fallback chars in Chrome and Firefox */
+}
+
+.slide {
+  background-image: url('https://olive-static.now.sh/sand.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  padding: 5rem 5rem 0 0;
+  text-align: right;
+  font-size: 0.5em;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+li {
+  margin: 0.8em 0;
+  position: relative;
+  z-index: 0;
+}
+
+h1 {
+  font-size: 1.7em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
+img {
+  max-height: 95vh;
+}
+
+#navigation {
+  font-size: 0.5em;
+}
+
+.sidebar {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: 0.35em;
+}
+.sidebar svg {
+  width: 1em !important;
+  height: 1em !important;
+}
+.sidebar a {
+  margin: .3em 0;
+}
+
+/* cover & back */
+.banner {
+  position: absolute;
+  top: 5%;
+  right:0;
+  width: 80%;
+  padding: .8em 0 .8em .8em;
+  text-align: left;
+}
+.logo {
+  height: 2.3em;
+  margin: 0 0 .5em 0;
+}
+.banner-ct {
+  display: flex;
+  padding: .4em .8em;
+  background-color: #dad5cb;
+  font-size: .90em;
+  line-height: 1.2em;
+}
+.banner-figures {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+}
+.figure {
+  height: 1.5em;
+}
+
+/* groups (Fri) */
+.group-header {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  padding: .8em 0 0 .8em;
+}
+.logo + span {
+  display: inline-block;
+  margin: auto 0 .6em .3em;
+  color: #a01d30;
+}
+.groups {
+  display: flex;
+  margin: 0 auto auto auto;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gp {
+  width: 7em;
+  height: 4.5em;
+  margin: 0.4em;
+  padding: 1.2em .6em;
+  background-color: #dad5cb;
+  font-size: .70em;
+}
+
+/* Bible verse pages */
+.verse > p, .verse li {
+  font-size: 0.7em;
+  line-height: 1.2em;
+  text-align: left;
+  margin: 0.2em 1.4em;
+}
+.verse li {
+  margin: 0.2em 1.4em 0.2em 3.0em;
+}
+.verse ol {
+  list-style: sans-dot;
+}
+@counter-style sans-dot { /* only Firefox support this */
+  system: extends decimal;
+  suffix: ' ';
+}
+.call-resp li:nth-child(even) {
+  color: #8e5d64;
+}
+.call-resp.sc-dark li:nth-child(even) {
+  color: rgb(238,196,198);
+}
+
+/* sermon */
+.sermon > h2 {
+  margin: auto;
+}
+.sermon > ol {
+  display: flex;
+  margin: 0 0 auto 4.3em;
+  max-height: 75vh;
+  min-height: 60vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center; /* horizontal center */
+  flex-wrap: wrap;
+  list-style: cjk-ideographic;
+  font-size: 0.6em;
+}
+.sermon > ol > li {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin: .3em 1em .3em 0;
+  min-width: 50%; /* for 2 col cases */
+  line-height: 1.2em;
+}
+ol ol {
+  list-style: decimal;
+}
+li li {
+  width: 100%;
+  margin: .2em 0;
+  line-height: 1em;
+}
+
+/* welcome */
+.welcome {
+  background-image: url('https://olive-static.now.sh/welcome.jpg');
+}
+.welcome > .logo {
+  position: absolute;
+  left: .6em;
+  bottom: 0;
+  width: 30%;
+  height: auto;
+}
+.welcome::before {
+  height: 10em !important;
+  margin-left: calc((100vw - 14.3em - 4.8rem)/2) !important;
+}
+
+/* style-classes */
+
+.sc-dark {
+  color: white;
+}
+
+.sc-cont-backdrop {
+  z-index: 0;
+}
+.sc-cont-backdrop::before {
+  position: absolute;
+  width: 14em;
+  height: 75vh;
+  margin-left: calc((100vw - 14.5em - 4.8rem)/2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(255,255,255,.3);
+  z-index: -1;
+}
+.sc-cont-backdrop.sc-dark::before {
+  background: rgba(0,0,0,.3);
+}
+
+.sc-text-shadow {
+  text-shadow: #FFF 0px 0 10px, #FFF 0px 0 25px;
+}
+.sc-text-shadow.sc-dark {
+  text-shadow: #000 0px 0 10px, #000 0px 0 25px;
+}
+
+
+/* per-page background */

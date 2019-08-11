@@ -1,0 +1,16 @@
+meta:
+  url:
+  name: "BCCC Sunday"
+  author:
+  thumbnail:
+  description:
+  sns:
+slide:
+  loop: false
+  sidebar: true
+  targetBlank: true
+  showIndex: false
+  isVertical: false
+extends:
+  js: index.js
+  css: style.css

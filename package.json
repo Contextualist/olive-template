@@ -1,0 +1,9 @@
+{
+  "engines": { "node": "10.x" },
+  "scripts": {
+    "now-build": "fusuma build -v"
+  },
+  "devDependencies": {
+    "fusuma": "<=1.1.2"
+  }
+}
